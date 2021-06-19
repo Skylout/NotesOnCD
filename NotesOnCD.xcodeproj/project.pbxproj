@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		B3B36292267E5BF1000C927D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B36291267E5BF1000C927D /* AppDelegate.swift */; };
 		B3B36294267E5BF1000C927D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B36293267E5BF1000C927D /* SceneDelegate.swift */; };
-		B3B36296267E5BF1000C927D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B36295267E5BF1000C927D /* ViewController.swift */; };
+		B3B36296267E5BF1000C927D /* NoteMainPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B36295267E5BF1000C927D /* NoteMainPageVC.swift */; };
 		B3B36299267E5BF1000C927D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B36297267E5BF1000C927D /* Main.storyboard */; };
 		B3B3629C267E5BF1000C927D /* NotesOnCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3B3629A267E5BF1000C927D /* NotesOnCD.xcdatamodeld */; };
 		B3B3629E267E5BF3000C927D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3B3629D267E5BF3000C927D /* Assets.xcassets */; };
 		B3B362A1267E5BF3000C927D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3B3629F267E5BF3000C927D /* LaunchScreen.storyboard */; };
+		B3B362A9267E5CF8000C927D /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362A8267E5CF8000C927D /* AddNoteVC.swift */; };
+		B3B362AC267E6570000C927D /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362AA267E6570000C927D /* Note+CoreDataClass.swift */; };
+		B3B362AD267E6570000C927D /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362AB267E6570000C927D /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B3B3628E267E5BF1000C927D /* NotesOnCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesOnCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B36291267E5BF1000C927D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3B36293267E5BF1000C927D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3B36295267E5BF1000C927D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3B36295267E5BF1000C927D /* NoteMainPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMainPageVC.swift; sourceTree = "<group>"; };
 		B3B36298267E5BF1000C927D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3B3629B267E5BF1000C927D /* NotesOnCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NotesOnCD.xcdatamodel; sourceTree = "<group>"; };
 		B3B3629D267E5BF3000C927D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3B362A0267E5BF3000C927D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3B362A2267E5BF3000C927D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3B362A8267E5CF8000C927D /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
+		B3B362AA267E6570000C927D /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "NotesOnCD/Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B3B362AB267E6570000C927D /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "NotesOnCD/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,8 @@
 		B3B36285267E5BF1000C927D = {
 			isa = PBXGroup;
 			children = (
+				B3B362AA267E6570000C927D /* Note+CoreDataClass.swift */,
+				B3B362AB267E6570000C927D /* Note+CoreDataProperties.swift */,
 				B3B36290267E5BF1000C927D /* NotesOnCD */,
 				B3B3628F267E5BF1000C927D /* Products */,
 			);
@@ -60,12 +68,13 @@
 			children = (
 				B3B36291267E5BF1000C927D /* AppDelegate.swift */,
 				B3B36293267E5BF1000C927D /* SceneDelegate.swift */,
-				B3B36295267E5BF1000C927D /* ViewController.swift */,
+				B3B36295267E5BF1000C927D /* NoteMainPageVC.swift */,
 				B3B36297267E5BF1000C927D /* Main.storyboard */,
 				B3B3629D267E5BF3000C927D /* Assets.xcassets */,
 				B3B3629F267E5BF3000C927D /* LaunchScreen.storyboard */,
 				B3B362A2267E5BF3000C927D /* Info.plist */,
 				B3B3629A267E5BF1000C927D /* NotesOnCD.xcdatamodeld */,
+				B3B362A8267E5CF8000C927D /* AddNoteVC.swift */,
 			);
 			path = NotesOnCD;
 			sourceTree = "<group>";
@@ -140,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3B36296267E5BF1000C927D /* ViewController.swift in Sources */,
+				B3B36296267E5BF1000C927D /* NoteMainPageVC.swift in Sources */,
+				B3B362AD267E6570000C927D /* Note+CoreDataProperties.swift in Sources */,
 				B3B36292267E5BF1000C927D /* AppDelegate.swift in Sources */,
+				B3B362A9267E5CF8000C927D /* AddNoteVC.swift in Sources */,
+				B3B362AC267E6570000C927D /* Note+CoreDataClass.swift in Sources */,
 				B3B36294267E5BF1000C927D /* SceneDelegate.swift in Sources */,
 				B3B3629C267E5BF1000C927D /* NotesOnCD.xcdatamodeld in Sources */,
 			);
@@ -299,7 +311,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LS.NotesOnCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = LS.NotesOnCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
