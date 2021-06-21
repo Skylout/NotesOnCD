@@ -17,13 +17,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" id="zTq-a2-2IB">
-                                <rect key="frame" x="0.0" y="24.5" width="375" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" rowHeight="115" id="zTq-a2-2IB" customClass="NoteCell" customModule="NotesOnCD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zTq-a2-2IB" id="A5h-1d-kuh">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbW-4B-YCV">
+                                            <rect key="frame" x="16" y="11" width="54" height="23.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8w-av-Xng">
+                                            <rect key="frame" x="16" y="48.5" width="40.5" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Lmu-v7-1Cc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loh-ZV-JNL">
+                                            <rect key="frame" x="16" y="83.5" width="343" height="20.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20.5" id="osx-MM-Yaf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Loh-ZV-JNL" firstAttribute="bottom" secondItem="A5h-1d-kuh" secondAttribute="bottomMargin" id="1Sx-NS-FEe"/>
+                                        <constraint firstItem="k8w-av-Xng" firstAttribute="top" secondItem="QbW-4B-YCV" secondAttribute="bottom" constant="14" id="7DL-yZ-2Is"/>
+                                        <constraint firstItem="Loh-ZV-JNL" firstAttribute="top" secondItem="k8w-av-Xng" secondAttribute="bottom" constant="14" id="89C-Uj-yr0"/>
+                                        <constraint firstItem="QbW-4B-YCV" firstAttribute="leading" secondItem="A5h-1d-kuh" secondAttribute="leadingMargin" id="Gpk-cb-cvA"/>
+                                        <constraint firstItem="Loh-ZV-JNL" firstAttribute="leading" secondItem="A5h-1d-kuh" secondAttribute="leadingMargin" id="O7R-tU-ntR"/>
+                                        <constraint firstItem="QbW-4B-YCV" firstAttribute="top" secondItem="A5h-1d-kuh" secondAttribute="topMargin" id="mjA-tb-S9C"/>
+                                        <constraint firstItem="k8w-av-Xng" firstAttribute="leading" secondItem="A5h-1d-kuh" secondAttribute="leadingMargin" id="p8v-qP-Z7m"/>
+                                        <constraint firstItem="Loh-ZV-JNL" firstAttribute="trailing" secondItem="A5h-1d-kuh" secondAttribute="trailingMargin" id="qQp-HZ-TSt"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="k8w-av-Xng" id="UWP-Hv-UBG"/>
+                                    <outlet property="noteNameLabel" destination="QbW-4B-YCV" id="o4U-t8-7QP"/>
+                                    <outlet property="noteTextLabel" destination="Loh-ZV-JNL" id="3iW-6M-ibt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -38,6 +79,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Сортировка"/>
                             </button>
+                            <connections>
+                                <action selector="sortingPressed:" destination="12l-Pk-WqX" id="LRz-fA-Ak5"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Mtg-rn-m00">
                             <connections>
@@ -48,7 +92,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyx-cZ-32q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.1884057971015" y="79.6875"/>
+            <point key="canvasLocation" x="1021.6" y="79.610194902548727"/>
         </scene>
         <!--Add NoteVC-->
         <scene sceneID="uN3-pF-C3d">
@@ -125,6 +169,7 @@
                     </view>
                     <connections>
                         <outlet property="noteNameTF" destination="Dc7-Cu-dhe" id="5bF-6U-y48"/>
+                        <outlet property="noteTF" destination="4vY-jA-FN4" id="WO5-vO-wWX"/>
                         <outlet property="saveButton" destination="cKf-82-zZX" id="nGJ-cb-CvB"/>
                     </connections>
                 </viewController>

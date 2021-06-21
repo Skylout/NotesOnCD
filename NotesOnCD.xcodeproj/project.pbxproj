@@ -17,6 +17,8 @@
 		B3B362A9267E5CF8000C927D /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362A8267E5CF8000C927D /* AddNoteVC.swift */; };
 		B3B362AC267E6570000C927D /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362AA267E6570000C927D /* Note+CoreDataClass.swift */; };
 		B3B362AD267E6570000C927D /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362AB267E6570000C927D /* Note+CoreDataProperties.swift */; };
+		B3B362B1267F2EE7000C927D /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362B0267F2EE7000C927D /* NoteModel.swift */; };
+		B3B362B5267F4C0B000C927D /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B362B4267F4C0B000C927D /* NoteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B3B362A8267E5CF8000C927D /* AddNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
 		B3B362AA267E6570000C927D /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "NotesOnCD/Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B3B362AB267E6570000C927D /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "NotesOnCD/Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B3B362B0267F2EE7000C927D /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		B3B362B4267F4C0B000C927D /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				B3B362A2267E5BF3000C927D /* Info.plist */,
 				B3B3629A267E5BF1000C927D /* NotesOnCD.xcdatamodeld */,
 				B3B362A8267E5CF8000C927D /* AddNoteVC.swift */,
+				B3B362B0267F2EE7000C927D /* NoteModel.swift */,
+				B3B362B4267F4C0B000C927D /* NoteCell.swift */,
 			);
 			path = NotesOnCD;
 			sourceTree = "<group>";
@@ -150,10 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3B36296267E5BF1000C927D /* NoteMainPageVC.swift in Sources */,
+				B3B362B1267F2EE7000C927D /* NoteModel.swift in Sources */,
 				B3B362AD267E6570000C927D /* Note+CoreDataProperties.swift in Sources */,
 				B3B36292267E5BF1000C927D /* AppDelegate.swift in Sources */,
 				B3B362A9267E5CF8000C927D /* AddNoteVC.swift in Sources */,
 				B3B362AC267E6570000C927D /* Note+CoreDataClass.swift in Sources */,
+				B3B362B5267F4C0B000C927D /* NoteCell.swift in Sources */,
 				B3B36294267E5BF1000C927D /* SceneDelegate.swift in Sources */,
 				B3B3629C267E5BF1000C927D /* NotesOnCD.xcdatamodeld in Sources */,
 			);
