@@ -38,9 +38,9 @@ class AddNoteVC: UIViewController {
         
         let noteCD = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        noteCD.setValue(noteName, forKey: "noteName")
-        noteCD.setValue(Date(), forKey: "dateOfCreation")
-        noteCD.setValue(note, forKey: "note")
+        noteCD.setValue(createdNote.noteName, forKey: "noteName")
+        noteCD.setValue(createdNote.dateOfCreation, forKey: "dateOfCreation")
+        noteCD.setValue(createdNote.note, forKey: "note")
         
         do{
             try managedContext.save()
@@ -50,9 +50,9 @@ class AddNoteVC: UIViewController {
         }
         
         //не самое правильное решение, но оно работает
-        let NMPVC = NoteMainPageVC()
-        NMPVC.tableView.reloadData()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadNotesTV"), object: nil)
+        }
     }
     
     /*

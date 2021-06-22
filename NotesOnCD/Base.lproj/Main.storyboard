@@ -12,7 +12,7 @@
         <scene sceneID="hld-Xk-xaL">
             <objects>
                 <tableViewController id="12l-Pk-WqX" customClass="NoteMainPageVC" customModule="NotesOnCD" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAa-Bd-oCg">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAa-Bd-oCg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -190,6 +190,7 @@
                             <constraint firstItem="Dc7-Cu-dhe" firstAttribute="centerX" secondItem="50k-8c-0Zb" secondAttribute="centerX" id="yvm-nO-9xE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LxH-r7-anL"/>
                     <connections>
                         <outlet property="noteNameTF" destination="Dc7-Cu-dhe" id="5bF-6U-y48"/>
                         <outlet property="noteTF" destination="4vY-jA-FN4" id="WO5-vO-wWX"/>
