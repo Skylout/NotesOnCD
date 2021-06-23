@@ -11,6 +11,7 @@ import CoreData
 class NoteMainPageVC: UITableViewController {
     //объект данных из CD
     var notes: [NSManagedObject] = []
+    let cdManager = CDManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,6 @@ class NoteMainPageVC: UITableViewController {
 
     //перепопределение одного из методов ЖЦ VC для загрузки данных из CoreData
     override func viewWillAppear(_ animated: Bool) {
-        let cdManager = CDManager()
         super.viewWillAppear(true)
         notes = cdManager.takeDataFromEntity()
     }
@@ -48,8 +48,13 @@ class NoteMainPageVC: UITableViewController {
         //добавить сортировку по дате и по имени
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        cdManager.deleteNote(notes[indexPath.row])
+        notes = cdManager.takeDataFromEntity()
+        self.tableView.reloadData()
+    }
+    
     @objc func reloadNotesTV () {
-        let cdManager = CDManager()
         notes = cdManager.takeDataFromEntity()
         self.tableView.reloadData()
     }

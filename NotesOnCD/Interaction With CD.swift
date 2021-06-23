@@ -45,4 +45,19 @@ class CDManager {
             //TODO: добавить алерт с ошибкой
         }
     }
+    
+    func deleteNote (_ deletingNote: NSManagedObject) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        managedContext.delete(deletingNote)
+        
+        do{
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            //TODO: добавить алерт с ошибкой
+        }
+    }
 }
