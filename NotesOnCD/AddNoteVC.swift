@@ -30,24 +30,8 @@ class AddNoteVC: UIViewController {
         let createdNote = NoteModel(noteName: noteName, dateOfCreation: Date(), note: note)
         
         //принцип сохранения такой же, как и у взятия – создаем делегат приложения, берем контекст, берем сущность, берем наши данные, добавляем в контекст и сохраняем
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        
-        let entity = NSEntityDescription.entity(forEntityName: "Note", in: managedContext)!
-        
-        let noteCD = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        noteCD.setValue(createdNote.noteName, forKey: "noteName")
-        noteCD.setValue(createdNote.dateOfCreation, forKey: "dateOfCreation")
-        noteCD.setValue(createdNote.note, forKey: "note")
-        
-        do{
-            try managedContext.save()
-            
-        } catch let error as NSError {
-            //TODO: добавить алерт с ошибкой
-        }
+        let cdManager = CDManager()
+        cdManager.saveDataToEntity(createdNote)
         
         //не самое правильное решение, но оно работает
         self.dismiss(animated: true) {

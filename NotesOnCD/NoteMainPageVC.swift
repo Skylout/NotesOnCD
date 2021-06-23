@@ -21,8 +21,9 @@ class NoteMainPageVC: UITableViewController {
 
     //перепопределение одного из методов ЖЦ VC для загрузки данных из CoreData
     override func viewWillAppear(_ animated: Bool) {
+        let cdManager = CDManager()
         super.viewWillAppear(true)
-        notes = takeDataFromEntity()
+        notes = cdManager.takeDataFromEntity()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,28 +49,12 @@ class NoteMainPageVC: UITableViewController {
     }
     
     @objc func reloadNotesTV () {
-        notes = takeDataFromEntity()
+        let cdManager = CDManager()
+        notes = cdManager.takeDataFromEntity()
         self.tableView.reloadData()
     }
 }
 
-extension NoteMainPageVC {
-    func takeDataFromEntity () -> [NSManagedObject] {
-        var dataFromCD: [NSManagedObject] = []
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return dataFromCD }
-        //взятие теущего контекста (если обобщать – то область данных) приложения
-        let managedContext = appDelegate.persistentContainer.viewContext
-        //инициализация запроса в сущность
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Note")
-        do{
-            dataFromCD = try managedContext.fetch(fetchRequest)
-        } catch let error as NSError{
-            //представляем алерт для информирования об ошибке взятия из сущности
-            
-        }
-        return dataFromCD
-    }
-}
+
 
 
