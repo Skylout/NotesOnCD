@@ -11,7 +11,6 @@
         <!--Notes-->
         <scene sceneID="hld-Xk-xaL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uyx-cZ-32q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="12l-Pk-WqX" customClass="NoteMainPageVC" customModule="NotesOnCD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BAa-Bd-oCg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -114,13 +113,13 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyx-cZ-32q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.6" y="79.610194902548727"/>
         </scene>
         <!--Add NoteVC-->
         <scene sceneID="uN3-pF-C3d">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uc1-NU-9hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Hnn-5U-BcP" customClass="AddNoteVC" customModule="NotesOnCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="50k-8c-0Zb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
@@ -198,13 +197,13 @@
                         <outlet property="saveButton" destination="cKf-82-zZX" id="nGJ-cb-CvB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uc1-NU-9hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860.8695652173915" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G87-qN-of7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tkJ-Of-C2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NsE-du-hp7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cGe-5L-shQ">
@@ -216,6 +215,7 @@
                         <segue destination="12l-Pk-WqX" kind="relationship" relationship="rootViewController" id="ID4-dz-Vif"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkJ-Of-C2V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.04347826086958" y="79.6875"/>
         </scene>

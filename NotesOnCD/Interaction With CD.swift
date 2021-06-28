@@ -9,6 +9,8 @@ import UIKit
 import CoreData
 
 class CDManager {
+    static var shared = CDManager()
+    
     func takeDataFromEntity () -> [NSManagedObject] {
         var dataFromCD: [NSManagedObject] = []
         

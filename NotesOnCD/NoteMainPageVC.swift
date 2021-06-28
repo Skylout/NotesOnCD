@@ -11,7 +11,6 @@ import CoreData
 class NoteMainPageVC: UITableViewController {
     //объект данных из CD
     var notes: [NSManagedObject] = []
-    let cdManager = CDManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class NoteMainPageVC: UITableViewController {
     //перепопределение одного из методов ЖЦ VC для загрузки данных из CoreData
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        notes = cdManager.takeDataFromEntity()
+        notes = CDManager.shared.takeDataFromEntity()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,13 +48,13 @@ class NoteMainPageVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        cdManager.deleteNote(notes[indexPath.row])
-        notes = cdManager.takeDataFromEntity()
+        CDManager.shared.deleteNote(notes[indexPath.row])
+        notes = CDManager.shared.takeDataFromEntity()
         self.tableView.reloadData()
     }
     
     @objc func reloadNotesTV () {
-        notes = cdManager.takeDataFromEntity()
+        notes = CDManager.shared.takeDataFromEntity()
         self.tableView.reloadData()
     }
 }

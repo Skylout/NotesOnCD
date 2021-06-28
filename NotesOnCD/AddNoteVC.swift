@@ -30,8 +30,8 @@ class AddNoteVC: UIViewController {
         let createdNote = NoteModel(noteName: noteName, dateOfCreation: Date(), note: note)
         
         //принцип сохранения такой же, как и у взятия – создаем делегат приложения, берем контекст, берем сущность, берем наши данные, добавляем в контекст и сохраняем
-        let cdManager = CDManager()
-        cdManager.saveDataToEntity(createdNote)
+
+        CDManager.shared.saveDataToEntity(createdNote)
         
         //не самое правильное решение, но оно работает
         self.dismiss(animated: true) {
